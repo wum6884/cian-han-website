@@ -1,16 +1,23 @@
-# CIAN HAN Homepage V3
+# CIAN HAN Homepage V4
 
-This is the homepage-only version for GitHub Pages.
+This is the cleaned and corrected homepage package.
+
+## Files
+- `index.html` — homepage
+- `style.css` — complete responsive stylesheet
+- `script.js` — mobile navigation
 
 ## Important
-All product/company image areas are intentionally blank.
-No placeholder product image has been invented.
+All product/image areas are intentionally blank. No product images have been added.
 
-## Upload
-Upload these files to the root of the `main` branch:
+## GitHub Pages
+Upload/replace these three files in:
+`wum6884/cian-han-website`
 
-- `index.html`
-- `style.css`
-- `script.js`
+The Products navigation and homepage product buttons point to:
+`products.html`
 
-The page is static and requires no build process.
+## Contact currently used
+Email: oneil@cianhan.com.tw
+WhatsApp: +886 979 037 370
+Location: Taichung, Taiwan
