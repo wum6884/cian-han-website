@@ -1,17 +1,16 @@
-# CIAN HAN Website — Version 1
+# CIAN HAN Homepage V3
 
-Static GitHub Pages homepage for CIAN HAN Co., Ltd.
+This is the homepage-only version for GitHub Pages.
 
-## Files
-- `index.html` — homepage
-- `style.css` — responsive visual design
-- `script.js` — mobile navigation and footer year
+## Important
+All product/company image areas are intentionally blank.
+No placeholder product image has been invented.
 
-## Publish
-Upload these files to the root of the `main` branch of:
-`wum6884/cian-han-website`
+## Upload
+Upload these files to the root of the `main` branch:
 
-Then open:
-https://wum6884.github.io/cian-han-website/
+- `index.html`
+- `style.css`
+- `script.js`
 
-No build step is required for this first version.
+The page is static and requires no build process.
