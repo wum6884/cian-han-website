@@ -1,16 +1,5 @@
-const menuToggle = document.querySelector(".menu-toggle");
-const siteNav = document.querySelector(".site-nav");
-
-if (menuToggle && siteNav) {
-  menuToggle.addEventListener("click", () => {
-    const open = siteNav.classList.toggle("is-open");
-    menuToggle.setAttribute("aria-expanded", String(open));
-  });
-
-  siteNav.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      siteNav.classList.remove("is-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-    });
-  });
-}
+const menuToggle=document.querySelector('.menu-toggle'),siteNav=document.querySelector('.site-nav');if(menuToggle&&siteNav){menuToggle.onclick=()=>{const o=siteNav.classList.toggle('is-open');menuToggle.setAttribute('aria-expanded',o)}}
+const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+function card(p,i){return `<a class="product-card" href="product.html?i=${i}"><div class="image-frame">${p.image?`<img src="${p.image}" alt="${esc(p.title)}" loading="lazy">`:'<span>Preview unavailable</span>'}</div><div class="product-info"><div class="product-code">${esc(p.category)}</div><h3>${esc(p.title)}</h3><p>View product details →</p></div></a>`}
+if(document.body.dataset.page==='products'){const nav=document.querySelector('#catalog-nav'),content=document.querySelector('#catalog-content'),g={};PRODUCT_DATA.forEach((p,i)=>(g[p.category]??=[]).push({...p,i}));let n=1;Object.entries(g).forEach(([cat,items])=>{const id=items[0].category_slug;nav.insertAdjacentHTML('beforeend',`<a href="#${id}">${String(n).padStart(2,'0')} ${esc(cat)}</a>`);content.insertAdjacentHTML('beforeend',`<section class="catalog-section" id="${id}"><div class="container"><p class="section-label">${String(n).padStart(2,'0')}</p><h2>${esc(cat)}</h2><p>${items.length} product entries from the CIAN HAN image library.</p><div class="product-grid">${items.map(x=>card(x,x.i)).join('')}</div></div></section>`);n++})}
+if(document.body.dataset.page==='detail'){const i=Number(new URLSearchParams(location.search).get('i')||0),p=PRODUCT_DATA[i]||PRODUCT_DATA[0];document.title=`${p.title} | CIAN HAN`;document.querySelector('#detail').innerHTML=`<div class="container"><a class="back-link" href="products.html">← Back to Products</a><div class="detail-grid"><div class="detail-image">${p.image?`<img src="${p.image}" alt="${esc(p.title)}">`:'<span>Preview unavailable</span>'}</div><div class="detail-copy"><p class="section-label">${esc(p.category)}</p><h1>${esc(p.title)}</h1><p>This product page uses the corresponding image from the CIAN HAN website picture library. Technical specifications and documents can be added when the product data is organized.</p><div class="detail-meta"><div><span>Original file</span><strong>${esc(p.source.split('/').pop())}</strong></div><div><span>Source format</span><strong>${esc(p.format.toUpperCase())}</strong></div><div><span>Category</span><strong>${esc(p.category)}</strong></div></div><a class="btn contact-button" href="mailto:oneil@cianhan.com.tw?subject=Inquiry%20about%20${encodeURIComponent(p.title)}">Request a Quote →</a></div></div></div>`}

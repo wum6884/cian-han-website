@@ -1,23 +1,5 @@
-# CIAN HAN Homepage V4
+# CIAN HAN Website
 
-This is the cleaned and corrected homepage package.
+This build uses the uploaded website_picture image library. The obsolete nested `7_Filter housing/6_Filter cartridge/` folder is excluded. Images are converted to web-friendly JPG previews.
 
-## Files
-- `index.html` — homepage
-- `style.css` — complete responsive stylesheet
-- `script.js` — mobile navigation
-
-## Important
-All product/image areas are intentionally blank. No product images have been added.
-
-## GitHub Pages
-Upload/replace these three files in:
-`wum6884/cian-han-website`
-
-The Products navigation and homepage product buttons point to:
-`products.html`
-
-## Contact currently used
-Email: oneil@cianhan.com.tw
-WhatsApp: +886 979 037 370
-Location: Taichung, Taiwan
+Pages: index.html, products.html, product.html
