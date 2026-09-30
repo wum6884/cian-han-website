@@ -1,5 +1,7 @@
-# CIAN HAN Website
+CIAN HAN Website V9.9
 
-This build uses the uploaded website_picture product catalog. The obsolete nested `7_Filter housing/6_Filter cartridge/` folder is excluded. Images are converted to web-friendly JPG previews.
-
-Pages: index.html, products.html, product.html
+Based on V9.7.
+- Added dedicated New Arrival page with PU-T01 and A10S.
+- Uses product visuals extracted from the supplied CIAN HAN product materials.
+- Official contact email only: cianhan.tw@gmail.com.
+- Existing product catalog and other pages remain unchanged.
