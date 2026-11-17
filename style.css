@@ -91,3 +91,9 @@ body[data-page=detail] .site-header{background:var(--navy)}
 .matrix-wrap{overflow-x:auto;border:1px solid var(--line);background:#fff}.matrix{width:100%;min-width:640px;border-collapse:collapse;font-size:13px}
 .matrix th,.matrix td{padding:16px 18px;border-bottom:1px solid var(--line);text-align:center}.matrix thead th{font-size:12px;color:var(--muted)}.matrix tbody th{text-align:left;font-weight:750}.matrix tbody th a{color:#126ca7}.matrix td{color:var(--blue);font-size:16px}.matrix .no{color:#c3ced9}.matrix tbody tr:last-child>*{border-bottom:0}
 @media(max-width:980px){.app-row-inner{grid-template-columns:1fr;gap:34px}.app-row-alt .app-copy,.app-row-alt .app-visual{order:initial}.app-row{padding:64px 0}.app-visual .image-frame{height:300px}}
+
+/* TZ-800G-2S arrival */
+.arrival-gallery{min-width:0}.arrival-feature.arrival-feature-light .arrival-image-wrap{background:#fff;border:1px solid var(--line);padding:0}
+.arrival-feature-light .arrival-image-wrap img{max-height:520px}
+.arrival-features{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;padding:0;list-style:none}.arrival-features li{padding:8px 12px;border:1px solid var(--line);font-size:12px;font-weight:650;color:var(--ink)}
+.arrival-feature-light .arrival-specs{margin-bottom:22px}

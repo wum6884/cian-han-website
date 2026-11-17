@@ -34,6 +34,9 @@ $('#detail').innerHTML=`<div class="container"><a class="back-link" href="produc
 const th=$('.detail-thumbs');th&&th.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;th.querySelectorAll('button').forEach(x=>x.classList.toggle('is-active',x===b));$('#detail-main').src=b.dataset.src})}
 /* inquiry form (opens the visitor's email app) */
 const form=$('#inquiry-form');
-if(form){const dl=$('#model-list');dl&&(dl.innerHTML=['PU-T01','A10S',...PRODUCT_DATA.map(p=>p.title)].map(t=>`<option value="${esc(t)}">`).join(''));
+if(form){const dl=$('#model-list');dl&&(dl.innerHTML=['PU-T01','A10S','TZ-800G-2S',...PRODUCT_DATA.map(p=>p.title)].map(t=>`<option value="${esc(t)}">`).join(''));
 const pr=new URLSearchParams(location.search).get('product');if(pr)form.elements.product.value=pr;
 form.addEventListener('submit',e=>{e.preventDefault();const f=form.elements,v=n=>f[n].value.trim();const body=[`Name: ${v('name')}`,`Company: ${v('company')}`,`Email: ${v('email')}`,`Product / model: ${v('product')}`,`Quantity: ${v('quantity')}`,'',v('message')].join('\n');$('#inquiry-status').hidden=false;location.href=`mailto:cianhan.tw@gmail.com?subject=${encodeURIComponent('CIAN HAN Inquiry'+(v('product')?' - '+v('product'):''))}&body=${encodeURIComponent(body)}`})}
+
+/* new-arrival galleries */
+document.querySelectorAll('.arrival-gallery').forEach(gl=>{const th=gl.querySelector('.detail-thumbs'),main=gl.querySelector('.arrival-image-wrap img');th&&main&&th.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;th.querySelectorAll('button').forEach(x=>x.classList.toggle('is-active',x===b));main.src=b.dataset.src;main.alt=b.dataset.alt||main.alt})});
